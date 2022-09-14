@@ -1,5 +1,5 @@
-import React from 'react'
-import ProductListProduct from './ProductListProduct'
+import React from "react";
+import ProductListProduct from "./ProductListProduct";
 
 const ProductList: any = (props: any) => {
   return (
@@ -11,11 +11,12 @@ const ProductList: any = (props: any) => {
           productName={prod.productName}
           quantity={prod.quantity}
           price={prod.price}
+          id={prod.id}
           onSellProduct={props.onSellProduct}
         />
       ))}
     </ul>
-  )
-}
+  );
+};
 
-export default ProductList
+export default ProductList;

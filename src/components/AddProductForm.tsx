@@ -1,21 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 type AddProductFormType = {
-  productName: string
-  quantity: string
-  price: string
-}
+  productName: string;
+  quantity: string;
+  price: string;
+};
 const AddProductFrom: any = (props: any) => {
   const [form, setForm] = useState<AddProductFormType>({
-    productName: '',
-    quantity: '',
-    price: '',
-  })
+    productName: "",
+    quantity: "",
+    price: "",
+  });
+  const isButtonDisabled = Object.values(form).includes("");
   const handleChange = (event: any) => {
-    const key = event.currentTarget.name
-    const value = event.currentTarget.value
-    const newForm = { ...form, [key]: value }
-    setForm(newForm)
-  }
+    const key = event.currentTarget.name;
+    const value = event.currentTarget.value;
+    const newForm = { ...form, [key]: value };
+    setForm(newForm);
+  };
   return (
     <form className="addProductForm__form">
       <input
@@ -41,15 +42,16 @@ const AddProductFrom: any = (props: any) => {
       />
       <button
         type="button"
+        disabled={isButtonDisabled}
         onClick={() => {
-          props.onAddProduct(form)
-          setForm({ productName: '', quantity: '', price: '' })
+          props.onAddProduct(form);
+          setForm({ productName: "", quantity: "", price: "" });
         }}
       >
         Ekle
       </button>
     </form>
-  )
-}
+  );
+};
 
-export default AddProductFrom
+export default AddProductFrom;
