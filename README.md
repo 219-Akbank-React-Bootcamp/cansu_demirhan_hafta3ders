@@ -1,6 +1,4 @@
-# Here is the link to test application
-
-[cansudemirhan-week3lesson.vercel.app](cansudemirhan-week3lesson.vercel.app)
+# Here is the link to test the application   :  [cansudemirhan-week3lesson.vercel.app](cansudemirhan-week3lesson.vercel.app)
 
 
 
